@@ -1,0 +1,39 @@
+.content-body{
+    background-color: #1B2838;
+}
+
+.option-bar {
+  background-color: #1B2838;
+  border: 1px solid #101820;
+  border-radius: 2px;
+
+  box-shadow:
+    inset 2px 2px 4px rgba(0, 0, 0, 0.5),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.05);
+
+  color: #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: box-shadow 0.2s ease, border 0.2s ease;
+}
+
+.option-bar::placeholder {
+  color: #7a8699;
+  font-style: italic;
+}
+
+.options-bg {
+  background-color: #C2BBAF;
+  
+}
+.add-to-library-button{
+    background: linear-gradient(to left, #1a44c2, #3e5cb7)
+}
+
+.card-bg{
+  background-color: #405163e6;
+}
+
+.card-hr{
+  background-color: #405163e6;
+}

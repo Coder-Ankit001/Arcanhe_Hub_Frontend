@@ -1,0 +1,59 @@
+.content-bg{
+    background-color: #1B2838;
+}
+
+.login-box{
+    background-color: #181a21;
+    width: 50vw;
+}
+
+.login-inner{
+    background-color: #32353c;
+}
+
+.login-button{
+    background: linear-gradient(90deg, #06BFFF 0%, #2D73FF 100%);
+}
+
+@media (max-width: 1272px) {
+    .login-box{
+        width: 60vw;
+    }
+    .login-box-header{
+        width: 60vw;
+    }
+    .login-box-right-half{
+        display: none;
+    }
+    .login-box-left-half{
+        width: 100%;
+    }
+    .login-box-left-half-login-button{
+        width: 50%;
+    }
+}
+
+@media (max-width: 650px) {
+    .login-box{
+        width: 70vw;
+    }
+    .login-box-header{
+        width: 70vw;
+    }
+    .login-box-right-half{
+        display: none;
+    }
+    .login-box-left-half{
+        width: 100%;
+    }
+    .login-box-left-half-login-button{
+        width: 50%;
+    }
+    .login-box-left-half-suggestion{
+        font-size: 9px;
+    }
+    .login-box-left-half-input{
+        height: 20px;
+        padding: 14px 4px;
+    }
+}

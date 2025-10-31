@@ -1,0 +1,133 @@
+
+
+.gift-card-desc {
+  color: #7A8B9D;
+}
+
+.categories {
+  color: #536f86;
+}
+
+.categories-content {
+  color: #7A8B9D;
+}
+
+.content-body {
+  background-color: #1B2838;
+}
+
+.search-button-nav {
+  background: #4e8cca;
+}
+
+.bg-page-header{
+    background: linear-gradient(to right, #00a6ff, #00458e);
+}
+
+/* For Webkit browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4b5563;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #6b7280;
+}
+
+.sign-in-bottom{
+  background-color: #0b1a24;
+}
+
+.show{
+  display: flex;
+}
+.hide{
+  display: none;
+}
+
+@media (max-width: 1272px) {
+  .left-half{
+    border: 2px solid red;
+    background-color: aquamarine;
+    position: absolute;
+    left: -250px;
+  }
+  .gift-card{
+    position: absolute;
+    left: -250px;
+  }
+  .content-body{
+    justify-content: center;
+  }
+  .search-box{
+    width: 37.5rem;
+  }
+  .search-bar-2{
+    display: none;
+  }
+  .contents-sign-in-bottom{
+    width: 37.5rem;
+    height: 20vh;
+  }
+}
+
+@media (max-width: 650px) {
+  .left-half{
+    position: absolute;
+    left: -250px;
+  }
+  .gift-card{
+    position: absolute;
+    left: -250px;
+  }
+  .content-body{
+    justify-content: center;
+  }
+  .search-box{
+    width: 18rem;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .search-bar-1{
+    display: none;
+  }
+  .search-bar-2{
+    display: none;
+  }
+  .search-option-outer{
+    width: 17rem;
+    padding: 0;
+  }
+  .search-option{
+    width: 15.4rem;
+  }
+  .search-option-button{
+    width: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contents-sign-in-bottom{
+    width: 20rem;
+    height: 20vh;
+  }
+  .contents-sign-in-bottom-header{
+    font-size: 13px;
+  }
+  .contents-sign-in-bottom-button{
+    height: 2rem;
+    width: 5rem;
+  }
+  .contents-sign-in-bottom{
+    font-size: 12px;
+  }
+}

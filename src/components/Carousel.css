@@ -1,0 +1,84 @@
+.carousel-bg{
+    background-color: #0D1820;
+}
+.button-slider{
+    height: 9px;
+    width: 16px;
+    border-radius: 2px;
+    opacity: 70%;
+}
+
+.fade {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+.prev-icon{
+    background: linear-gradient(to right, #F8EBDC, #E7D7C2);
+}
+.prev-icon:hover{
+    background: linear-gradient(to right, #989898, #E7D7C2);
+}
+.next-icon{
+    background: linear-gradient(to right, #E7D7C2, #F8EBDC);
+}
+.next-icon:hover{
+    background: linear-gradient(to right, #f8d8af, #989898);
+}
+
+@media (max-width: 1272px) {
+    .carousel-box{
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        height: max-content;
+    }
+    .carousel.side-imgs{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+    .top-seller{
+        margin-bottom: 4px;
+    }
+    .game-cost{
+        position: absolute;
+        right: 40px;
+        bottom: 0px;
+    }
+}
+
+@media (max-width: 650px) {
+    .carousel-box{
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        height: max-content;
+        width: 18rem;
+    }
+    .carousel-main-poster{
+        width: 18rem;
+    }
+    .carousel.side-imgs{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+    .side-img-imgs{
+        width: 6rem;
+    }
+    .top-seller{
+        margin-bottom: 4px;
+    }
+    .game-cost{
+        position: absolute;
+        right: 40px;
+        bottom: 0px;
+    }
+}

@@ -1,0 +1,18 @@
+.prev-icon{
+    background: linear-gradient(to right, #F8EBDC, #E7D7C2);
+}
+.prev-icon:hover{
+    background: linear-gradient(to right, #8f3d06, #E7D7C2);
+}
+.next-icon{
+    background: linear-gradient(to right, #E7D7C2, #F8EBDC);
+}
+.next-icon:hover{
+    background: linear-gradient(to right, #E7D7C2, #8f3d06);
+}
+
+@media (max-width: 1272px) {
+    .discount-section{
+        display: none;
+    }
+}

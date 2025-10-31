@@ -1,0 +1,23 @@
+.card-discount-tag{
+    background-color: rgb(58, 99, 50);
+}
+.card-price-tag{
+    background-color: #344654;
+    color: #738895;
+}
+
+.slide-left{
+    transition: transform 0.4s ease-in-out;
+    transform: translateX(0);
+}
+
+.slide-right{
+    transition: transform 0.4s ease-in-out;
+    transform: translateX(100%);
+}
+
+@media (max-width: 1272px){
+    .game-cards-img-imgs{
+        max-width: 16vw;
+    }
+}

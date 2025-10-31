@@ -1,0 +1,45 @@
+nav{
+    background-color: #171d25;
+}
+.navbar-options{
+  font-family: "Noto Sans", sans-serif;
+}
+
+.hamburger-icon{
+  display: none;
+}
+
+@media (max-width: 1272px) {
+    .navbar-box{
+      height: 120px;
+      display: flex;
+      gap: 16px;
+      display: flex;
+      align-items: center;
+    }
+    .hamburger-icon{
+      display: block;
+      height: 70px;
+      display: flex;
+      align-items: center;
+    }
+    .navbar-main{
+      margin-top: 4px;
+    }
+    .navbar-profiles{
+      padding-right: 7px;
+    }
+    .install-app{
+      display: none;
+    }
+    .navbar-login-lang{
+      font-size: 14px;
+    }
+    .web-app-logo{
+      margin-top: 5px;
+      font-size: 24px;
+    }
+    .navbar-options{
+      font-size: 16px;
+    }
+}
