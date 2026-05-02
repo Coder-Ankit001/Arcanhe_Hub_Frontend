@@ -6,7 +6,9 @@ import axios from 'axios'
 import { useNavigate, } from 'react-router-dom'
 import { ProfileContext } from '../context/profile'
 import './Login.css'
+
 const Login = () => {
+    const baseUrl = `${import.meta.env.VITE_ARCANE_HUB_URI}:${import.meta.env.VITE_PORT}`
     const {profile, setProfile} = useContext(ProfileContext)
     const {
         register,
@@ -20,42 +22,23 @@ const Login = () => {
     const token = localStorage.getItem('token')
     const onSubmit = async (data) => {
         try {
-            if (token) {
-                try{
-                    const res = await axios.post('http://localhost:3000/user',{},{
-                        headers: {
-                            Authorization: `Bearer ${token}`
-                        }
-                    });
-                    console.log("Token is valid, navigating...");
-                    const getUser = localStorage.getItem('username')
-                    if(getUser) {
-                        setProfile({...profile, username: data.username})
-                        console.log(getUser)
-                    }
-                    navigate('/user')
-                    return
-                }
-                catch (err) {
-                    console.log("Token invalid/expired. Proceeding with login.");
-                    localStorage.removeItem('token');
-                }
-            }
-            const res = await axios.post('http://localhost:3000/login', {
+            const res = await axios.post(`${baseUrl}/login`, {
                 username: data.username,
                 password: data.password
+            }, {
+                withCredentials: true
             })
-            localStorage.setItem('token', res.data.token)
-            localStorage.setItem('username', data.username)
-            setProfile({...profile, username: data.username})
-            console.log("Sucess!", res.data)
 
+            const userRes = await axios.get(`${baseUrl}/me`, {
+                withCredentials: true
+            })
+
+            setProfile(userRes.data)
             navigate('/user')
         }
         catch (err) {
             console.log("Error!", err.response?.data || err.message)
             setError('server_error', { message: err.response?.data || err.message })
-            return;
         }
     }
 

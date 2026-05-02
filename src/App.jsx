@@ -12,12 +12,14 @@ import Dashboard from './components/Dashboard'
 import StoryRich from './components/StoryRich'
 import VRTitle from './components/VRTitle'
 import Horror from './components/Horror'
+import axios from 'axios'
 
 import { WishlistContext } from './context/wishlist'
 import { ProfileContext } from './context/profile'
 import './App.css'
 
 function App() {
+  const baseUrl = `${import.meta.env.VITE_ARCANE_HUB_URI}:${import.meta.env.VITE_PORT}`
   const [profile, setProfile] = useState({
     username: "Random_User_0101",
     avatar: profilePic,
@@ -26,6 +28,18 @@ function App() {
         generes: ['Action', 'Adventure', 'Role-Playing']
     }
   })
+
+  useEffect(() => {
+    axios.get(`${baseUrl}/me`, {
+        withCredentials: true
+      })
+      .then(res => {
+        setProfile(res.data);
+      })
+      .catch(() => {
+        setProfile({ username: "Random_User_0101" });
+      });
+  }, [])
 
   const [wishlist, setWishlist] = useState(() => {
     try {
@@ -36,7 +50,6 @@ function App() {
       return []
     }
   })
-
 
   useEffect(() => {
     localStorage.setItem('wishlistItem', JSON.stringify(wishlist))
