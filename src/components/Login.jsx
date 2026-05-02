@@ -8,7 +8,7 @@ import { ProfileContext } from '../context/profile'
 import './Login.css'
 
 const Login = () => {
-    const baseUrl = `${import.meta.env.VITE_ARCANE_HUB_URI}:${import.meta.env.VITE_PORT}`
+    const baseUrl = `${import.meta.env.VITE_ARCANE_HUB_URL}`
     const {profile, setProfile} = useContext(ProfileContext)
     const {
         register,

@@ -19,7 +19,7 @@ import { ProfileContext } from './context/profile'
 import './App.css'
 
 function App() {
-  const baseUrl = `${import.meta.env.VITE_ARCANE_HUB_URI}:${import.meta.env.VITE_PORT}`
+  const baseUrl = `${import.meta.env.VITE_ARCANE_HUB_URL}`
   const [profile, setProfile] = useState({
     username: "Random_User_0101",
     avatar: profilePic,
