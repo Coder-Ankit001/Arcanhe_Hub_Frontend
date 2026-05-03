@@ -9,7 +9,6 @@ import './Login.css'
 
 const Login = () => {
     const baseUrl = `${import.meta.env.VITE_ARCANE_HUB_URL}`
-    console.log("BASE URL:", baseUrl);
     const {profile, setProfile} = useContext(ProfileContext)
     const {
         register,
@@ -22,6 +21,7 @@ const Login = () => {
     const navigate = useNavigate()
     const token = localStorage.getItem('token')
     const onSubmit = async (data) => {
+        console.log("BASE URL:", baseUrl);
         try {
             const res = await axios.post(`${baseUrl}/login`, {
                 username: data.username,
