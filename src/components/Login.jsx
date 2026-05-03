@@ -9,6 +9,7 @@ import './Login.css'
 
 const Login = () => {
     const baseUrl = `${import.meta.env.VITE_ARCANE_HUB_URL}`
+    console.log("BASE URL:", baseUrl);
     const {profile, setProfile} = useContext(ProfileContext)
     const {
         register,
